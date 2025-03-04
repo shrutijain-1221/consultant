@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Header';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router,  Route, Routes } from 'react-router-dom';
 import Service from './Service';
 import Home from './Home';
 import Package from './Package';
@@ -11,6 +11,7 @@ import Footer from './Footer';
  
 function App() {
   return (
+    <Router  basename="/consultant">
     <div className="App">
       <Header />
  
@@ -23,6 +24,7 @@ function App() {
  
       <Footer />
     </div>
+</Router>
   );
 }
  
