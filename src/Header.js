@@ -23,11 +23,19 @@ function Header() {
         {menuOpen ? <IoMdClose size={30} color="#0073e6" /> : <TiThMenu size={30} color="#0073e6" />}
       </div>
       <nav className={`nav-tabs ${menuOpen ? 'open' : ''}`}>
-        <NavLink to="/" exact activeClassName="active" onClick={toggleMenu}>Home</NavLink>
-        <NavLink to="/services" activeClassName="active" onClick={toggleMenu}>Services</NavLink>
-        <NavLink to="/packages" activeClassName="active" onClick={toggleMenu}>Packages</NavLink>
-        <NavLink to="/contact" activeClassName="active" onClick={toggleMenu}>Contact</NavLink>
-      </nav>
+  <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>
+    Home
+  </NavLink>
+  <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>
+    Services
+  </NavLink>
+  <NavLink to="/packages" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>
+    Packages
+  </NavLink>
+  <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>
+    Contact
+  </NavLink>
+</nav>
     </header>
   );
 }
