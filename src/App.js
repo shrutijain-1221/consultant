@@ -11,7 +11,7 @@ import Footer from './Footer';
  
 function App() {
   return (
-    <Router  basename="/consultant">
+ 
     <div className="App">
       <Header />
  
@@ -24,7 +24,7 @@ function App() {
  
       <Footer />
     </div>
-</Router>
+
   );
 }
  
