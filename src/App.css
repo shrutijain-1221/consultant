@@ -1,38 +1,134 @@
+App.css
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+body {
+background-color: #e6f7ff;
+ padding-top: 60px;
+
+}
+
 .App {
-  text-align: center;
+
+min-height: 100vh;
+ background-color: #e6f7ff;
+
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ height: 40vmin;
+ pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ .App-logo {
+ animation: App-logo-spin infinite 20s linear;
+ }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-header {display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 40px;
+ background-color: white;
+ border-bottom: 1px solid #ddd; position: fixed;
+ top: 0;
+ width: 100%;
+z-index: 1000;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.logo {
+ display: flex;
+ align-items: center;
+}
+
+.logo img {
+ height: 50px;
+ margin-right: 10px;
+}
+
+.business-name {
+font-weight: bold; color: #0073e6;
+ font-size: 1.5em;
+}
+
+.menu-icon {
+ display: none;
+ cursor: pointer;
+}
+
+.nav-tabs {
+ display: flex; align-items: center;
+}
+
+.nav-tabs a {
+ margin: 0 10px;
+ text-decoration: none;
+ color: #333;
+ font-weight: bold;
+ padding: 10px 20px;
+ border-radius: 20px;
+ transition: background 0.3s;
+}
+.nav-tabs a.active {
+ background: linear-gradient(45deg, #0073e6, #66b3ff);
+ color: white;
+}
+
+.nav-tabs a:hover {
+ background: linear-gradient(45deg, #0073e6, #66b3ff);
+ color: white;
 }
 
 .App-link {
-  color: #61dafb;
+ color: #61dafb;
+}
+
+.stats-section h2 {
+   color: #0073e6;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ from {
+ transform: rotate(0deg);
+ }
+
+ to {
+  transform: rotate(360deg);
+ }
+}
+
+@media (max-width: 768px) {
+ .menu-icon {
+  display: block;
+ }
+
+ .nav-tabs {
+ display: none;
+ }
+
+ .nav-tabs.open {
+ display: flex;
+ flex-direction: column;
+ position: fixed;
+ top: 90px;
+ right: 0;
+height: calc(100% - 90px);
+ width: 50%;
+ background-color: #f8f9fa;
+  padding: 20px;
+ border-left: 1px solid #ddd;
+ z-index: 1000;
+ transition: transform 0.3s ease-in-out;
+ transform: translateX(0);
+ }
+
+ .nav-tabs a {
+ margin: 10px 0;
+ }
 }

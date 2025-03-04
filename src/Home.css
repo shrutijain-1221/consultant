@@ -1,0 +1,212 @@
+.carousel-container {
+     display: flex;
+ align-items: center;
+     justify-content: center;
+     position: relative;
+ width: 100%;
+     overflow: hidden;
+     padding: 20px;
+    }
+    
+    .carousel {
+     display: flex;
+     transition: transform 0.5s ease-in-out;
+     width: calc(300px * 4);
+    
+    }
+    
+    .card {
+     background-color: #0073e6;
+ color: white;
+border-radius: 10px;
+     overflow: hidden;
+     width: 300px;
+    
+margin: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     text-align: center;
+    }
+    
+    .card-image-circle {
+     width: 100px;
+     height: 100px;
+border-radius: 50%;
+     object-fit: cover;
+     margin: 0 auto 10px;
+    }
+    
+    .card-content h3 {
+     font-size: 1.4rem;
+    }
+    
+    .card-content p {
+     margin-top: 1rem;
+     font-size: 1rem;
+    }
+    
+    .carousel-button {
+         background-color: #003366;
+     color: #ffffff;
+     border: none;
+ border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     cursor: pointer;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     z-index: 1000;
+     font-size: 1.5em;
+    }
+    
+    .carousel-button.prev {
+ left: 10px;
+    }
+    
+    .carousel-button.next {
+         right: 10px;
+    }
+    
+    .carousel-button:hover {
+ background-color: #002244;
+    }
+    
+    @media (min-width: 769px) {
+     .card {
+     width: 400px;
+    
+     }
+    }
+    
+    @media (max-width: 768px) {
+     .carousel {
+      justify-content: center;
+     }
+    
+     .card {
+      width: 250px;
+      margin: 0 auto;
+     }
+    
+     .carousel-button.prev {
+      left: 10px;
+    
+     }
+    
+     .carousel-button.next {
+     right: 10px;
+    
+     }
+    }
+    
+    .illustration-section {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 40px 20px;
+    }
+    
+    .text-content {
+     flex: 1;
+     padding: 20px;
+    }
+    
+    .text-content .heading {
+     font-size: 2rem;
+     margin-bottom: 1rem;
+    }
+    
+    .text-content p {
+     font-size: 1.3rem;
+     margin-bottom: 1.5rem;
+    }
+    
+    .text-content h3 {
+     font-size: 1.5rem;
+     font-weight: bold;
+     margin-top: 1.5rem;
+     margin-bottom: 0.5rem;
+    }
+    
+    .illustration-image {
+     flex: 1;
+     max-width: 100%;
+     height: auto;
+     border-radius: 10px;
+    }
+    
+    @media (max-width: 768px) {
+     .illustration-section {
+     flex-direction: column;
+     text-align: center;
+ }
+    
+     .text-content {
+      padding-right: 0;
+      margin-bottom: 20px;
+     }
+    }
+    
+    .feature {
+     display: flex;
+     align-items: center;
+     margin-bottom: 1.5rem;
+    }
+    
+    .feature-image {
+ width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     margin-right: 15px;
+     object-fit: cover;
+    }
+    
+    .stats-section {
+     text-align: center;
+     padding: 40px 20px;
+     max-width: 1200px;
+ margin: 0 auto;
+    }
+    
+    .stats-section h2 {
+     font-size: 2rem;
+     font-weight: bold;
+     margin-bottom: 1rem;
+    }
+    
+    .stats-section p {
+     font-size: 1.2rem;
+ margin-bottom: 2rem;
+    }
+    
+    .stats {
+ display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     max-width: 1000px;
+     margin: 0 auto;
+    }
+    
+    .stat {
+     text-align: center;
+     margin: 20px;
+     flex: 1 1 200px;
+     min-width: 200px;
+    }
+    
+    .stat-number {
+     font-size: 2.5rem;
+     font-weight: bold;
+    }
+    
+    .stat-label {
+     font-size: 1.2rem;
+     margin-top: 0.5rem;
+    }
+    
+    @media (min-width: 1200px) {
+     .stats {
+     justify-content: space-between;
+    }
+    }
