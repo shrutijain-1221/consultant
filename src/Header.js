@@ -29,8 +29,8 @@ function Header() {
   <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>
     Services
   </NavLink>
-  <NavLink to="/packages" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>
-    Packages
+  <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>
+    About
   </NavLink>
   <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>
     Contact
